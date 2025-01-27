@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Proposal</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+            text-align: left;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input,
+        textarea {
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+
+        button {
+            background: #ff6f61;
+            color: #fff;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e55d50;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .container {
+            text-align: center;
+            max-width: 222px;
+            margin-left: 488px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>🌹 Will You Be Mine? 🌹</h1> -->
+     <div class="container">
+        <div class="tenor-gif-embed" data-postid="8514475" data-share-method="host" data-aspect-ratio="0.803125" data-width="100%"><a href="https://tenor.com/view/german-shepherd-lick-cute-puppy-dog-gif-8514475">German Sheperd Dog GIF</a>from <a href="https://tenor.com/search/german+sheperd-gifs">German Sheperd GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </div> <br>
+       
+        <p>Answer a few questions and make my heart happy! 💖</p>
+    
+    <form id="proposalForm">
+        <label for="name">What's your pretty name? :)</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="like">When are you giving the coffee treat? Saturday or Sunday—your call! ☕ 😊</label>
+        <input type="text" id="like" name="like" placeholder="e.g., cappuccino, filter coffee" required>
+
+        <label for="message">A message for me... I'm still waiting :)</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write something..." required></textarea>
+
+        <button type="submit">Submit 💌</button>
+        <a href="/fill.html" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007bff; text-decoration: none; border-radius: 5px;">Go to Magical Page</a>
+    </form>
+
+
+
+    <div class="footer">
+        Made with ❤️ for someone special!
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxufNMhppHwug9r-YCN0PzM-coRkyD5FJaTX6eZtxBfr5zzkfmnrNi3DFJ9Dj0xgxIWRA/exec'; // Replace with your Web App URL
+        const form = document.getElementById('proposalForm');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Prevent page reload
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Your response has been sent! 😊');
+                    } else {
+                        alert('Oops! Something went wrong. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert('Oops! Something went wrong. Please try again.');
+                });
+        });
+    </script>
+</body>
+
+</html>

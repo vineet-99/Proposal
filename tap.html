@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated-Radial-Menu</title>
+
+    <!-- <link rel="stylesheet" href="Animated-Radial-Menu.css"> -->
+    <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script defer src="Animated-Radial-Menu.js"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+            box-sizing: border-box;
+        }
+
+        .Animated-Radial-Menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #181826;
+        }
+
+        .Animated-Radial-Menu .menu {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Animated-Radial-Menu .menu .toggle {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: #2f363e;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 100;
+            font-size: 2em;
+            transition: transform 0.5s;
+        }
+
+        .Animated-Radial-Menu .menu li {
+            position: absolute;
+            left: 0;
+            list-style: none;
+            transition: 0.3s;
+            transition-delay: calc(0.04s * var(--i));
+            transform: rotate(0deg) translateX(110px);
+            transform-origin: 140px;
+        }
+
+        .Animated-Radial-Menu .menu li a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            color: var(--clr);
+            border: 2px solid var(--clr);
+            border-radius: 50%;
+            font-size: 1.5em;
+            transform: rotate(calc(-45deg * var(--i)));
+            transition: 0.3s;
+        }
+
+        .Animated-Radial-Menu .menu li a:hover {
+            background: var(--clr);
+            color: #333;
+            box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 50px var(--clr);
+        }
+
+        .Animated-Radial-Menu .menu.active .toggle {
+            transform: rotate(315deg);
+        }
+
+        .Animated-Radial-Menu .menu.active li {
+            transform: rotate(calc(45deg * var(--i))) translateX(0px);
+        }
+
+        /*# sourceMappingURL=Animated-Radial-Menu.css.map */
+    </style>
+</head>
+
+<body>
+
+    <div class="Animated-Radial-Menu">
+
+        <ul class="menu">
+            <div class="toggle" style="
+            display: flex; 
+            align-items: center;  
+            justify-content: center; 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            background: linear-gradient(45deg, #9C27B0, #E91E63); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+            cursor: pointer;
+            transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;">
+                <span style="color: white; font-size: 18px; font-weight: bold;">Tap</span>
+            </div>
+
+            <li style="--i: 0; --clr: #E1306C;">
+                <a href="https://www.instagram.com/v.i.n_99?igsh=ZmF3czVpYWM3MmFh" target="_blank">
+                    <div style="
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center;
+                        width: 50px; 
+                        height: 50px; 
+                        border-radius: 50%; 
+                        background: linear-gradient(135deg, #E1306C, #F58529, #833AB4, #FD1D1D); 
+                        transition: transform 0.3s ease, background 0.3s ease;">
+                        <ion-icon name="logo-instagram" style="color: white; font-size: 24px;"></ion-icon>
+                    </div>
+                </a>
+            </li>
+
+            <li style="--i: 2; --clr: #4CAF50;">
+                <a href="tel:+919026184164" style="text-decoration: none;">
+                    <div style="
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center;
+                        width: 50px; 
+                        height: 50px; 
+                        border-radius: 50%; 
+                        background: linear-gradient(135deg, #4CAF50, #8BC34A); 
+                        transition: transform 0.3s ease, background 0.3s ease;">
+                        <ion-icon name="call-outline" style="color: white; font-size: 24px;"></ion-icon>
+                    </div>
+                </a>
+            </li>
+
+            <li style="--i: 4; --clr: #25D366;">
+                <a href="https://wa.me/919026184164" style="text-decoration: none;">
+                    <div style="
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center;
+                        width: 50px; 
+                        height: 50px; 
+                        border-radius: 50%; 
+                        background: linear-gradient(135deg, #25D366, #128C7E); 
+                        transition: transform 0.3s ease, background 0.3s ease;">
+                        <ion-icon name="logo-whatsapp" style="color: white; font-size: 24px;"></ion-icon>
+                    </div>
+                </a>
+            </li>
+
+            <li style="--i: 6; --clr: #1877F2;">
+                <a href="https://www.facebook.com/profile.php?id=100028553520399" style="text-decoration: none;"
+                    target="_blank">
+                    <div style="
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center;
+                        width: 50px; 
+                        height: 50px; 
+                        border-radius: 50%; 
+                        background: linear-gradient(135deg, #1877F2, #3b5998, #42A1F2); 
+                        box-shadow: 0 4px 8px rgba(24, 119, 242, 0.6), 0 0 10px rgba(66, 161, 242, 0.4);
+                        transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;">
+                        <ion-icon name="logo-facebook" style="color: white; font-size: 24px;"></ion-icon>
+                    </div>
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </div>
+    <script>
+        let toggle = document.querySelector('.toggle')
+        let menu = document.querySelector('.menu')
+
+        toggle.onclick = () => {
+            menu.classList.toggle('active')
+        }
+    </script>
+
+</body>
+
+</html>

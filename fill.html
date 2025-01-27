@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Romantic Input Boxes</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 2;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #ffe6e6; /* Soft pink background */
+      color: #b30000; /* Deep romantic red text */
+    }
+
+    .text-container {
+      font-size: 1.5rem;
+      white-space: pre-wrap;
+    }
+
+    .editable {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    .editable input {
+      width: 20px; /* Width for a single character */
+      height: 20px; /* Height for the input box */
+      text-align: center;
+      font-size: 1.2rem;
+      background: #ff9999; /* Soft romantic red background */
+      color: #fff; /* White text color */
+      border: 2px solid #cc0000; /* Deep red border */
+      border-radius: 4px; /* Slightly rounded corners */
+      outline: none;
+      padding: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .editable input:focus {
+      background-color: #ff4d4d; /* Brighter red when focused */
+    }
+
+    .editable input:not(:placeholder-shown) {
+      background-color: #ff6666; /* Filled color */
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #990000; /* Deeper red for headers */
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Fill-In-Capital-Letter &#x1F609;</h1>
+  <div class="text-container">
+    <span class="editable"><input maxlength="1" /></span>
+    Am Un<span class="editable"><input maxlength="1" /></span>ucky
+    T<span class="editable"><input maxlength="1" /></span>
+    Ha<span class="editable"><input maxlength="1" /></span>e Not
+    A Fri<span class="editable"><input maxlength="1" /></span>nd
+    Like<span class="editable"><input maxlength="1" /></span>
+  </div>
+  <a href="/impress.html" style="text-decoration: none;">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu7jamy36Mol76-1ZUBOx9ptUH78ayCL_V5Q&s" alt=""
+      style="width: 100px; height: 100px; border-radius: 50%; border: 4px solid #e63c3c; display: inline-block; object-fit: cover; 
+             box-shadow: 0 8px 12px rgba(244, 118, 214, 0.975); 
+             filter: brightness(1.1) saturate(1.2) hue-rotate(-10deg); 
+             transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;"
+      onmouseover="this.style.transform='scale(1.2)'; 
+                   this.style.boxShadow='0 12px 18px rgba(255, 105, 180, 0.7)'; 
+                   this.style.filter='brightness(1.2) saturate(1.4) hue-rotate(-15deg)';"
+      onmouseout="this.style.transform='scale(1)'; 
+                  this.style.boxShadow='0 8px 12px rgba(255, 105, 180, 0.5)'; 
+                  this.style.filter='brightness(1.1) saturate(1.2) hue-rotate(-10deg)';">
+</a>
+
+  <script>
+    document.querySelectorAll('.editable input').forEach(input => {
+      input.addEventListener('input', (e) => {
+        // Allow only a single letter
+        e.target.value = e.target.value.replace(/[^a-zA-Z]/g, '').substring(0, 1);
+      });
+    });
+  </script>
+</body>
+
+</html>
