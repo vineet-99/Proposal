@@ -261,7 +261,7 @@
 				top: 5px;
 				gap: -40px;
 				padding: 10px;
-				border-radius: 51px;
+				border-radius: 10px;
 			}
 
 			.login h2 {
@@ -273,13 +273,24 @@
 				padding: 12px 15px;
 			}
 
-			.login .inputBox #btn {
-				font-size: 1.1em;
-			}
-
 			.leaves .set div {
 				width: 50px; /* Adjusting the leaf size for smaller screens */
 			}
+			.login .inputBox #btn {
+			position: relative;
+			border: none;
+			outline: none;
+			background: #8f2c24;
+			color: #fff;
+			cursor: pointer;
+			font-size: 1.1em;
+			font-weight: 500;
+			transition: 0.5s;
+		}
+
+		.login .inputBox #btn:hover {
+			background: #d64c42;
+		}
 		}
 	</style>
 </head>
