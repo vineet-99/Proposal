@@ -124,7 +124,9 @@
 </head>
 
 <body>
-
+ <audio id="bgMusic" autoplay loop>
+		<source src="Sanson Ki Mala.mp3" type="audio/mpeg">
+	</audio>
   <div class="container">
     <div class="photo-box"></div>
     <h2>
@@ -171,7 +173,19 @@
     <a href="pro.html" class="image-link"
       style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9yk9_UVu_iFpXAHZtNj-3TlgugpDd960Pjg&s');"></a>
   </div>
+  <script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const audio = document.getElementById("bgMusic");
+      audio.volume = 0.08;  // Setting volume to 30%
 
+	
+			document.body.addEventListener("click", function () {
+				if (audio.paused) {
+					audio.play().catch(error => console.log("Autoplay block ho gaya: ", error));
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>
