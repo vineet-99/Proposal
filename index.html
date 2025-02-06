@@ -296,7 +296,7 @@
 </head>
 
 <body>
-	<audio id="bgMusic" loop>
+	<audio id="bgMusic" autoplay loop>
 		<source src="srivalli.mp3" type="audio/mpeg">
 	</audio>
 	<section>
@@ -331,16 +331,18 @@
 	</section>
 	
 	<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const audio = document.getElementById("bgMusic");
+		document.addEventListener("DOMContentLoaded", function () {
+			const audio = document.getElementById("bgMusic");
+			audio.volume = 0.08;  // Setting volume to 8%
 
-        document.body.addEventListener("click", function () {
-            if (audio.paused) {
-                audio.play().catch(error => console.log("Autoplay block ho gaya: ", error));
-            }
-        });
-    });
-</script>
+	
+			document.body.addEventListener("click", function () {
+				if (audio.paused) {
+					audio.play().catch(error => console.log("Autoplay block ho gaya: ", error));
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>
