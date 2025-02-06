@@ -85,34 +85,34 @@
     
     <form id="proposalForm">
         <label for="name">What's your pretty name? :)</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name"required>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
         <label for="like">When are you giving the coffee treat? Saturday or Sunday—your call! ☕ 😊</label>
-        <input type="text" id="like" name="like" placeholder="e.g., cappuccino, filter coffee"required>
+        <input type="text" id="like" name="like" placeholder="e.g., cappuccino, filter coffee" required>
 
         <label for="message">A message for me... I'm still waiting :)</label>
         <textarea id="message" name="message" rows="4" placeholder="Write something..." required></textarea>
 
         <button type="submit">Submit 💌</button>
-
-    </form>
+        
+          </form>
 
     <div class="footer">
         Made with ❤️ for someone special!
     </div>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxVSw_A5inWzw--9rJ1f5I8QzY4x6jrLPzJJaWDy7A-goKEEE_3zpnDSpojLL_sm7Z3Vg/exec'; // Replace with your Web App URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxVSw_A5inWzw--9rJ1f5I8QzY4x6jrLPzJJaWDy7A-goKEEE_3zpnDSpojLL_sm7Z3Vg/exec'; 
         const form = document.getElementById('proposalForm');
-
+    
         form.addEventListener('submit', e => {
-            e.preventDefault(); // Prevent page reload
+            e.preventDefault(); 
+            
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
                     if (response.ok) {
                         alert('Your response has been sent! 😊');
-                            window.location.href = "fill.html"; // Redirect to fill.html
-
+                        window.location.href = "fill.html"; // Redirect to fill.html
                     } else {
                         alert('Oops! Something went wrong. Please try again.');
                     }
@@ -123,6 +123,8 @@
                 });
         });
     </script>
+    
+    
 </body>
 
 </html>
