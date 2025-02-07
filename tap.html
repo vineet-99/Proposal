@@ -92,13 +92,35 @@
         .Animated-Radial-Menu .menu.active li {
             transform: rotate(calc(45deg * var(--i))) translateX(0px);
         }
+        .hover-button {
+        background-color: #d32f2f;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    /* Hover Effect */
+    a:hover .hover-button {
+        background-color: #b71c1c; /* Darker Red */
+        transform: scale(1.1); /* Slight Zoom */
+    }
 
         /*# sourceMappingURL=Animated-Radial-Menu.css.map */
     </style>
 </head>
 
 <body>
-
+<div style="text-align: center; margin-top: 20px;">
+        <a href="last.html" style="text-decoration: none;">
+            <button class="hover-button">
+                last 😿
+            </button>
+        </a>
+    </div>
     <div class="Animated-Radial-Menu">
 
         <ul class="menu">
