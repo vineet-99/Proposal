@@ -315,6 +315,10 @@
 
 
   <body>
+ <audio id="bgMusic" autoplay loop>
+		<source src="Aankhon Mein Doob Jaane Ko.mp3" type="audio/mpeg">
+	</audio>
+    
     <div id="card">
       <center>
         <h1> heyy i m Vineet..</h1>
@@ -361,6 +365,21 @@
       </button>
     </a>
   </div>
+
+    <script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const audio = document.getElementById("bgMusic");
+      audio.volume = 0.10;  // Setting volume to 10%
+
+	
+			document.body.addEventListener("click", function () {
+				if (audio.paused) {
+					audio.play().catch(error => console.log("Autoplay block ho gaya: ", error));
+				}
+			});
+		});
+	</script>
+    
   </body>
   
 
