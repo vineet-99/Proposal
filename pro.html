@@ -76,6 +76,9 @@
 </head>
 
 <body>
+    <audio id="bgMusic" autoplay loop>
+		<source src="Kahin to... Piano.mp3" type="audio/mpeg">
+	</audio>
     <!-- <h1>🌹 Will You Be Mine? 🌹</h1> -->
      <div class="container">
         <div class="tenor-gif-embed" data-postid="8514475" data-share-method="host" data-aspect-ratio="0.803125" data-width="100%"><a href="https://tenor.com/view/german-shepherd-lick-cute-puppy-dog-gif-8514475">German Sheperd Dog GIF</a>from <a href="https://tenor.com/search/german+sheperd-gifs">German Sheperd GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
@@ -122,6 +125,17 @@
                     alert('Oops! Something went wrong. Please try again.');
                 });
         });
+        document.addEventListener("DOMContentLoaded", function () {
+			const audio = document.getElementById("bgMusic");
+      audio.volume = 0.08;  // Setting volume to 8%
+
+	
+			document.body.addEventListener("click", function () {
+				if (audio.paused) {
+					audio.play().catch(error => console.log("Autoplay block ho gaya: ", error));
+				}
+			});
+		});
     </script>
     
     
