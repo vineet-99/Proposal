@@ -5,30 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rejection Accepted 😎</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500&display=swap');
+        
         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+            background-size: 400% 400%;
+            animation: gradientBG 6s ease infinite;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
             text-align: center;
-            background-color: #ffebee;
-            color: #d32f2f;
-            padding: 50px;
+            margin: 0;
+            padding: 20px;
         }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
         .container {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            max-width: 600px;
+            animation: fadeIn 1.5s ease-in-out;
         }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         h1 {
-            /* font-family: sans-serif; */
-            font-size: 30px;
-            margin-bottom: 10px;
-            color: rgb(71, 71, 71);
-            font-style:initial;
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 15px;
         }
+        
         p {
-            font-size: 28px;
+            font-size: 18px;
             font-style: italic;
-            line-height: 1.5;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        .heart {
+            font-size: 50px;
+            animation: heartbeat 1.5s infinite;
+            color: red;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background: #ff6f61;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .button:hover {
+            background: #d32f2f;
         }
     </style>
 </head>
@@ -39,7 +94,7 @@
         <p>
             I m not a kind of person who keeps bothering someone... <br>
             If i feel i m not important to u...surely i will simply leave with silence...<br><br>
-            No grudges...no complaints...just a quiet goodbye... 💔<br>
+            No grudges...no complaints...just a quiet goodbye...<span class="heart">💔</span><br>
             Becoz forcing someone to stay is never love...it's just a illusion...💭✨<br><br>
         </p>
     </div>
