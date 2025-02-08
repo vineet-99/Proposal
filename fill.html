@@ -63,6 +63,10 @@
 </head>
 
 <body>
+    <audio id="bgMusic" autoplay loop>
+		<source src="saathiya.mp3" type="audio/mpeg">
+	</audio>
+  
   <h1>Fill-In-Capital-Letter &#x1F609;</h1>
   <div class="text-container">
     <span class="editable"><input maxlength="1" /></span>
@@ -93,6 +97,17 @@
         e.target.value = e.target.value.replace(/[^a-zA-Z]/g, '').substring(0, 1);
       });
     });
+      document.addEventListener("DOMContentLoaded", function () {
+			const audio = document.getElementById("bgMusic");
+      audio.volume = 0.08;  // Setting volume to 8%
+
+	
+			document.body.addEventListener("click", function () {
+				if (audio.paused) {
+					audio.play().catch(error => console.log("Autoplay block ho gaya: ", error));
+				}
+			});
+		});
   </script>
 </body>
 
