@@ -88,7 +88,9 @@
     </style>
 </head>
 <body>
-
+<audio id="bgMusic" autoplay loop>
+		<source src="Shayad - Piano Cover.mp3" type="audio/mpeg">
+	</audio>
     <div class="container">
         <h1>I have removed all my ID & numbers...i have no idea if this QR code or link has reached u or not...Bt if it has...then it’s **your turn** to make an effort to find me...i have already put in a lot of effort from my side</h1>
         <p>
@@ -98,6 +100,18 @@
             Becoz forcing someone to stay is never love...it's just a illusion...💭✨<br><br>
         </p>
     </div>
+ <script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const audio = document.getElementById("bgMusic");
+      audio.volume = 0.08;  // Setting volume to 8%
 
+	
+			document.body.addEventListener("click", function () {
+				if (audio.paused) {
+					audio.play().catch(error => console.log("Autoplay block ho gaya: ", error));
+				}
+			});
+		});
+	</script>
 </body>
 </html>
